@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<openrb version='0.1 alpha'>
+    <rb_description>
+        <rally_name>Rally race name</rally_name>
+        <creation_date>2017-04-10T07:40:52Z</creation_date>
+        <security>
+            <rb_psw>rbpass</rb_psw>
+            <note_psw>notepass</note_psw>
+        </security>
+        <contact role="Organiser"><!-- rally organizer contact -->
+            <name>John Smith</name>
+            <tel>+39123456789</tel>
+            <club>RoadRunner</club>
+        </contact>
+        <contact role="Tracker"><!-- rally tracker contact -->
+            <name>John Brown</name>
+            <tel>+39123454321</tel>
+            <club>BestRoad</club>
+        </contact>
+        <contact role="Tracker"><!-- rally tracker 2 contact -->
+            <name>John Doe</name>
+            <tel>+3912342536467</tel>
+            <club>Adriatica Servizio Corse</club>
+        </contact>
+    </rb_description>
+    <rb_body>
+        <note hidden="False"> <!-- if attribute hidden is True, this note must not be shown until note password is inserted
+		<trip_set> 0.00 </trip_set> <!-- if trip_set is 0.00 is trip reset, if is int, is trip set, if not present, no adjustment -->
+            <note_order>000001</note_order> <!-- number: note number  -->
+            <note_id>1f00</note_id> <!-- number: note number  -->
+            <note-name>1bis</note-name> <!-- number: note number  -->
+            <total_km>0.00</total_km>
+            <partial_km>0.00</partial_km>
+            <picture>
+                <format><!--Picture format (jpg, png, svg) -->
+                    jpg
+                </format>
+                <blob>
+                    <!-- some base64 encoded image-->
+                </blob>
+            </picture>
+            <waypoint>
+                <lat>44.025665</lat>
+                <lon>11.781403</lon>
+                <elevation>337</elevation> <!-- .gpx uses it, someone might find this useful-->
+            </waypoint>
+            <true_cap>180
+            </true_cap> <!-- not sure about this for tracing, would need a way to calculate heading; but could be used to provide the pilot with the cap for navigation-->
+            <creation_time>2017-04-10T07:40:52Z
+            </creation_time> <!-- timestamp used by tracers -->
+            <km_to_end>10.00
+            </km_to_end> <!-- km till next wp, time check or race finish; depending on race org/tracers -->
+        </note>
+    </rb_body>
+</openrb>
